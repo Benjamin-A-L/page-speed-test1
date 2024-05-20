@@ -1,7 +1,7 @@
 ---
 import { BtnHero } from "../components/nav";
 import Layout from "../layouts/Layout.astro";
-import Calendly from "../components/calendly.astro";
+// import Calendly from "../components/Calendly.astro";
 // import @fontsource/rubik;
 import "../styles/homeStyles.css";
 ---
@@ -92,7 +92,27 @@ import "../styles/homeStyles.css";
         book a free no-pressure call if you're interested, and we can see if our
         services can help you
       </h2>
-      <Calendly client:idle />
+      <!-- <Calendly /> -->
+
+      <div class="calendly-responsive-wrapper">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/holdtml-benjamin/reunion-inicial"
+          style="min-width:320px;height:700px;"
+        >
+        </div>
+        <script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async></script>
+        <!-- <div id="calendly-imbed">
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/holdtml-benjamin/reunion-inicial?primary_color=df7b1e"
+              style="min-width: 320px; height: 92vh; width: 100%; margin: 0px 0px 120px 0px; padding: 0px"
+            >
+            </div> -->
+      </div>
     </section>
   </main>
 

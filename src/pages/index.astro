@@ -51,12 +51,16 @@ import "../styles/homeStyles.css";
               target="_blank"
               aria-label="link to astro.build"
             >
-              <img
-                class="icon"
-                src="assets/astro_logo.png"
-                alt="Astro Logo"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="assets/astro_logo.webp" type="image/webp" />
+                <source srcset="assets/astro_logo.png" type="image/png" />
+                <img
+                  src="assets/astro_logo.webp"
+                  alt="Astro Logo"
+                  loading="lazy"
+                  class="icon"
+                />
+              </picture>
             </a>
           </div>
           <div class="prismic-container how-item-container">
@@ -65,12 +69,19 @@ import "../styles/homeStyles.css";
               target="_blank"
               aria-label="link to Prismic.io"
             >
-              <img
-                class="icon"
-                src="../assets/prismic-logo.png"
-                alt="Prismic.io Logo"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="../assets/prismic-logo.webp"
+                  type="image/webp"
+                />
+                <source srcset="../assets/prismic-logo.png" type="image/png" />
+                <img
+                  src="../assets/prismic-logo.webp"
+                  alt="Prismic.io Logo"
+                  loading="lazy"
+                  class="icon"
+                />
+              </picture>
             </a>
             <p>
               we integrate <a

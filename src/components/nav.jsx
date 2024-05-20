@@ -112,7 +112,7 @@ export function scrollToElement(elementId) {
                     <button onClick={()=> scrollToElement('.booking-section')} className='contact-nav-btn nav-btn'>contact</button>
                     <button onClick={()=> scrollToElement('.help-section')} className='service-nav-btn nav-btn'>service</button>
                 </div>
-                <button onClick={() => SideHandler()} className='side-nav-btn'>
+                <button onClick={() => SideHandler()} aria-label='open side navigation' className='side-nav-btn'>
                     <div className='side-icon-container'>
                         <div className='oval oval1'></div>
                         <div className='oval oval2'></div>

@@ -138,7 +138,7 @@ export const SideLinkHandler = (target) => {
 export const NavBarMobile = () => {
     return(
         <div className='nav-mobile-container'>
-            <button onClick={() => SideHandler()} className='side-nav-close'></button>
+            <button onClick={() => SideHandler()} className='side-nav-close' aria-label='close side navigation'></button>
             <div className="extra-layer-wrapper">
                 <button onClick={()=>SideLinkHandler('.header-section')} className='home-nav-btn-mobile nav-btn-mobile'>home<div className='btn-bg'/></button>
                 <button onClick={()=>SideLinkHandler('.booking-section')} className='contact-nav-btn-mobile nav-btn-mobile'>Contact<div className='btn-bg'/></button>

@@ -1,5 +1,7 @@
 ---
+import { BtnHero } from "../components/nav";
 import Layout from "../layouts/Layout.astro";
+import Calendly from "../components/calendly.astro";
 // import @fontsource/rubik;
 import "../styles/homeStyles.css";
 ---
@@ -8,13 +10,17 @@ import "../styles/homeStyles.css";
   <main>
     <section class="header-section">
       <div class="header-container">
-        <h1>The access to the digital era for your business</h1>
+        <h1>Increasing conversion rete, one landing page at a time</h1>
         <div class="header-cta-container">
           <p>sign up for a free call to chat with us</p>
-          <!-- <button class="header-cta-btn" on:click={() => scrollTo('.booking-section')}>take me there</button> -->
+          <BtnHero client:visible />
         </div>
         <div class="header-image">
-          <img src="/assets/Designer.jpeg" alt="Designer" />
+          <picture>
+            <source srcset="assets/Designer2.webp" type="image/webp" />
+            <source srcset="assets/Designer2.jpeg" type="image/jpeg" />
+            <img src="assets/Designer2.webp" alt="Header Image" />
+          </picture>
         </div>
       </div>
     </section>
@@ -33,25 +39,44 @@ import "../styles/homeStyles.css";
         <div class="how-we-do-it-explanation">
           <div class="gatsby-container how-item-container">
             <p>
-              <a href="https://gatsbyjs.com" target="_blank">gatsby</a> is a static
-              site generator, that we use to build your website, this means that
-              all of its static content is served almost instantly
+              <a
+                href="https://astro.build"
+                target="_blank"
+                aria-label="link to Astro.build">Astro</a
+              > is a static site generator, that we use to build your website, this
+              means that all of its static content is served almost instantly
             </p>
-            <a href="https://gatsbyjs.com" target="_blank">
-              <img class="icon" src="assets/icon.png" alt="Gatsby Icon" />
+            <a
+              href="https://gastro.build"
+              target="_blank"
+              aria-label="link to astro.build"
+            >
+              <img
+                class="icon"
+                src="assets/astro_logo.png"
+                alt="Astro Logo"
+                loading="lazy"
+              />
             </a>
           </div>
           <div class="prismic-container how-item-container">
-            <a href="https://prismic.io" target="_blank">
+            <a
+              href="https://prismic.io"
+              target="_blank"
+              aria-label="link to Prismic.io"
+            >
               <img
                 class="icon"
                 src="../assets/prismic-logo.png"
-                alt="Prismic Logo"
+                alt="Prismic.io Logo"
+                loading="lazy"
               />
             </a>
             <p>
-              we integrate <a href="https://prismic.io" target="_blank"
-                >prismic</a
+              we integrate <a
+                href="https://prismic.io"
+                target="_blank"
+                aria-label="link to Prismic.io">prismic</a
               > into your website, so that its content can be easily edited without
               you needing to hire any additional web developers, or learning how
               to code
@@ -67,25 +92,7 @@ import "../styles/homeStyles.css";
         book a free no-pressure call if you're interested, and we can see if our
         services can help you
       </h2>
-      <div class="calendly-responsive-wrapper">
-        <div
-          class="calendly-inline-widget"
-          data-url="https://calendly.com/holdtml-benjamin/reunion-inicial"
-          style="min-width:320px;height:700px;"
-        >
-        </div>
-        <script
-          type="text/javascript"
-          src="https://assets.calendly.com/assets/external/widget.js"
-          async></script>
-        <!-- <div id="calendly-imbed">
-          <div
-            class="calendly-inline-widget"
-            data-url="https://calendly.com/holdtml-benjamin/reunion-inicial?primary_color=df7b1e"
-            style="min-width: 320px; height: 92vh; width: 100%; margin: 0px 0px 120px 0px; padding: 0px"
-          >
-          </div> -->
-      </div>
+      <Calendly client:idle />
     </section>
   </main>
 
@@ -93,6 +100,7 @@ import "../styles/homeStyles.css";
     <a
       class="footer-email sm-icon"
       href="mailto:benjamin.astudilloloyer@holdtml.com"
+      aria-label="email to benjamin.astudilloloyer@holdtml.com"
       >benjamin.astudilloloyer@holdtml.com</a
     >
     <div class="social-media-container">
@@ -100,6 +108,7 @@ import "../styles/homeStyles.css";
         target="_blank"
         href="https://instagram.com/benjamin_astudilloloyer/"
         class="instagram sm-icon"
+        aria-label="Instagram link"
       >
         <i class="fa-brands fa-instagram"></i>
       </a>
@@ -107,10 +116,16 @@ import "../styles/homeStyles.css";
         target="_blank"
         href="https://facebook.com/benjamin.holdtml"
         class="facebook sm-icon"
+        aria-label="Facebook link"
       >
         <i class="fa-brands fa-facebook"></i>
       </a>
-      <a target="_blank" href="https://linkedin.com" class="linkedin sm-icon">
+      <a
+        target="_blank"
+        href="https://linkedin.com"
+        class="linkedin sm-icon"
+        aria-label="Linkedin link"
+      >
         <i class="fa-brands fa-linkedin"></i>
       </a>
     </div>

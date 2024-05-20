@@ -5,4 +5,7 @@ import react from '@astrojs/react';
 export default defineConfig({
 
     integrations: [react()],
+    styles: [
+        'src/styles/homeStyles.css',
+    ],
 });

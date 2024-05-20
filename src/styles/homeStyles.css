@@ -64,9 +64,12 @@
 .header-image{
     grid-column: 2/-1;
     grid-row: 1/-1;
+    /* object-position: center; */
     /* box-shadow */
 }
 .header-image img{
+    /* overflow: hidden; */
+    object-fit: cover;
     width: 100%;
     position: relative;
     height: 54dvh;

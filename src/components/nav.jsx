@@ -219,3 +219,7 @@ export function scrollToElement(elementId) {
             </div>
         )
     }
+
+    export const BtnHero = () => {
+        return <button className="header-cta-btn" onClick={() => scrollToElement('.booking-section')}>claim my free call</button>
+    }

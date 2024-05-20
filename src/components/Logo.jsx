@@ -1,5 +1,3 @@
-// import { styled } from '@emotion/styled';
-// import { ReactIntegrationOptions } from '@astrojs/react';
 import '@fontsource/rubik'
 
 export const Logo = () => {

@@ -16,14 +16,16 @@
     align-items: center;
     justify-items: center;
     
-    width: 80dvw;
+    width: 90dvw;
     max-width: 900px;
     border-radius: 1rem;
     box-shadow: rgba(2, 1, 0, 0.14) 0px 1px 41px 2px;
+    transition: 0.5s;
     
     @media(min-width: 760px){
         grid-template-columns: 1.2fr 1fr;
         grid-template-rows: auto auto;
+        width: 80dvw;
     };
 }
 

@@ -4,9 +4,12 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
-
+html{
+    overflow-x: hidden;
+}
 .header-section{
-    @media(min-width: 380px){height: 100dvh;}
+    @media(min-width: 500px){height: calc(100svh - 30px);}
+    @media(min-width: 820px){height: calc(100svh - 70px);}
     display: grid;
 }
 .header-container{
@@ -30,11 +33,19 @@
 }
 
 .header-container h1{
-    margin-top: 2rem;
-    justify-self: center;
-    text-align: center;
-    padding: clamp(10px, 1.8vw, 30px);
+    margin-top: 3rem;
     font-size: clamp(22px, 5px + 1.6vw , 34px);
+}
+.header-container h2{
+    font-size: clamp(18px, 5px + 1.6vw , 22px);
+}
+.header-container div{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    gap: 20px;
+
+    padding: clamp(10px, 1.8vw, 30px);
 }
 .header-cta-container{
     display: grid;
@@ -74,12 +85,12 @@
     object-fit: cover;
     width: 100%;
     position: relative;
-    height: 54dvh;
+    height: 54vh;
     border-radius: 1rem 1rem 0px 0px;   
     
     @media(min-width: 760px){
         border-radius: 0px 1rem 1rem 0px;   
-        height: 70dvh;
+        height: 70vh;
     }
 }
 
@@ -89,7 +100,7 @@
 
 .help-section{
     display: grid;
-    @media(min-width: 380px){height: 100dvh;}
+    @media(min-width: 380px){height: 100svh;}
 }
 .how-container{
     /* border: solid black 3px;  */

@@ -10,96 +10,6 @@ export function scrollToElement(elementId) {
   }
 }
 
-// export const NavWrapper = styled.nav`
-//     // border-bottom: solid 6px rgb(0, 0, 0, 0.1);
-//     border-bottom: solid 3px rgb(241, 151, 32, 0.1);
-//     // box-shadow: 0px 0px 1000px 1px ;
-//     box-shadow: 0px 0px 1000px 1px rgb(241, 151, 32);
-//     background-color: white;
-
-//     padding: 0.6rem;
-    
-//     display: grid;
-//     grid-template-columns: auto auto;
-//     position: sticky;
-//     top: 0;
-//     z-index: 4;
-
-//     .logo-link{
-//         justify-self: left;
-//         cursor: pointer;
-//         border: none;
-//         background: none;
-//         border-radius: 10px;
-//         transition: 0.8s;
-//     }    
-//     .logo-link:hover{
-//         box-shadow: 0px 0px 1000px 1px rgb(241, 151, 32);
-//         background-color: rgb(241, 151, 32, 0.14);
-//     }    
-//     .nav-btn-container{
-//         display: grid;
-//         grid-template-columns: repeat(2, auto);
-//         gap: 1rem;
-//         justify-self: right;
-//         align-items: center;
-//         margin-right: 1rem;
-//     }    
-//     .nav-btn{
-//         background-color: rgb(241, 151, 32);
-//         color: white;
-//         border: none;
-//         border-radius: 4px;
-//         font-size: 16px;
-//         font-weight: bold;
-//         padding: 0.4rem;
-
-//         cursor: pointer;
-//         transition: 0.4s;
-//     }    
-//     .nav-btn:hover{
-//         background-color: black;
-//     }    
-
-//     @media(max-width: 820px){
-//         grid-tmplate-columns: auto;
-//         justify-content: right;
-
-//         .nav-link-btn{
-//             display: none;
-//         }    
-
-//         .side-nav-btn{
-//             display: block;
-//             cursor: pointer;
-//             border: none;
-//             background-color: transparent;
-//         }    
-//         .side-icon-container{
-//             display: grid;
-//             width: 50px;
-//             grid-template-rows: repeat(3, auto);
-//             gap: 6px;
-//             background-color: transparent;
-//         }    
-//         .oval{
-//             background-color: transparent;
-//             border: solid black 3px;
-//             // border-radius: 5px;
-//             border-top-left-radius: 24% 100%;
-//             border-top-right-radius: 24% 100%;
-//             border-bottom-left-radius: 24% 100%;
-//             border-bottom-right-radius: 24% 100%;
-//             width: 50px;
-//             height: 10px;
-//         }    
-//     }    
-//     @media(min-width: 821px){
-//         .side-nav-btn{
-//             display: none;
-//         }    
-//     }    
-//     `
     
     export const NavBar = () => {
         
@@ -129,9 +39,10 @@ export function scrollToElement(elementId) {
                    padding: 0.6rem;
                    display: grid;
                    grid-template-columns: auto auto;
-                   position: sticky;
-                   top: 0;
-                   z-index: 4;
+                   position: fixed;
+                   width: 100%;
+                   top: 0px;
+                   z-index: 999;
                }
                
                .logo-link {
@@ -221,5 +132,5 @@ export function scrollToElement(elementId) {
     }
 
     export const BtnHero = () => {
-        return <button className="header-cta-btn" onClick={() => scrollToElement('.booking-section')}>claim my free call</button>
+        return <button className="header-cta-btn" onClick={() => scrollToElement('.booking-section')}>get my free consultation</button>
     }

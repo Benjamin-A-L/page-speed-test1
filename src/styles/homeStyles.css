@@ -2,14 +2,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', 'sans-serif';
 }
 html{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .header-section{
-    @media(min-width: 500px){height: calc(100svh - 30px);}
-    @media(min-width: 820px){height: calc(100svh - 70px);}
+    box-sizing: border-box;
+    @media(min-width: 500px){height: 100vh; padding-top: 50px;}
+    @media(min-width: 820px){height: 100vh; padding-top: 90px;}
     display: grid;
 }
 .header-container{
@@ -34,12 +35,13 @@ html{
 
 .header-container h1{
     margin-top: 3rem;
-    font-size: clamp(22px, 5px + 1.6vw , 34px);
+    font-size: clamp(22px, 5px + 1.6vw , 36px);
 }
 .header-container h2{
-    font-size: clamp(18px, 5px + 1.6vw , 22px);
+    font-size: clamp(18px, 5px + 1.6vw , 24px);
+    font-weight: 500;
 }
-.header-container div{
+.header-text-area{
     display: grid;
     align-content: center;
     text-align: center;
@@ -81,10 +83,8 @@ html{
     /* box-shadow */
 }
 .header-image img{
-    /* overflow: hidden; */
     object-fit: cover;
     width: 100%;
-    position: relative;
     height: 54vh;
     border-radius: 1rem 1rem 0px 0px;   
     
@@ -108,6 +108,7 @@ html{
     border-radius: 8px;
     padding: 2rem;
     font-size: clamp(13px, 3px + 1.3vw , 18px);
+    margin: 10rem 0rem 10rem 0rem;
 
     width: 80dvw;
     max-width: 800px;
@@ -116,28 +117,35 @@ html{
     justify-self: center;
     
     display: grid;
-    gap: 2rem;
-    
+    gap: 4rem;
 }
 .how-container h2{    
-    font-size: clamp(22px, 4px + 1.7vw , 28px);
+    font-size: clamp(22px, 4px + 1.7vw , 30px);
+    justify-self: center;
 }
-.how-paragraph-1{
-    @media(min-width: 760px){text-align: right;
-    justify-self: right;}
+.how-container ul{
+    display: grid;
+    gap: 6px;
 }
-.how-paragraph{
-    border: solid 2px rgb(241, 151, 32);
-    padding: 0.6rem;
-    border-radius: 3px;
-    @media(min-width: 760px){
-        width: 60%;
-        /* border: black solid 2px; */
-        border-radius: 4px;
-    }
+.how-container ul li{
+    margin-left: 1rem;
+}
+.performance-p{
+    font-weight: 600;
+    font-size: clamp(13px, 4px + 1.5vw , 18px);    
+    grid-column: 1/-1;
+    text-align: center;
+}
+.astro-p{}
+.prismic-p{}
+.string-link{
+    color:blue;
+}
+.string-link:hover{
+    color: rgb(241, 151, 32);
 }
 
-.gatsby-container{
+.astro-container{
     margin-bottom: 10px;
 }
 .how-item-container{
@@ -148,6 +156,11 @@ html{
 }
 .icon{
     width: clamp(60px, 14px + 8vw, 110px);
+}
+.stats-img{
+    grid-column: 1/-1;
+    justify-self: center;
+    width: 90%;
 }
 
 .booking-section{
@@ -160,10 +173,10 @@ html{
     font-size: clamp(20px, 5px + 1.6vw , 28px);
     text-align: center;
     padding: clamp(10px, 1.8vw, 30px); 
+    @media(max-width: 662px){margin: 0px 0px 40px 0px;}
 }
 
 .home-footer{
-    @media(min-width: 380px){display: grid;}
     justify-content: center;
     align-items: center;
     grid-template-columns: auto auto;
@@ -173,6 +186,8 @@ html{
     padding: 2rem 0px 2rem 0px;
     background-color: black;
     width: 100%;
+    
+    @media(min-width: 380px){display: grid;}
 }
 .social-media-container{
     display: grid;

@@ -3,20 +3,23 @@ import { NavBar } from "../components/nav.jsx";
 import { NavBarMobile } from "../components/navMobile";
 interface Props {
   title: string;
+  description: string;
 }
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/webp" href="/assets/Bold-Icon.webp" />
     <meta name="generator" content={Astro.generator} />
-    <!-- <meta name="og-image" content="assets/HoldTML-ICON.webp" /> -->
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="og:title" content={title} />
+    <meta name="og:description" content={description} />
+    <meta name="og-image" content="assets/HoldTML-ICON.webp" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"

@@ -32,6 +32,11 @@ const { title, description } = Astro.props;
   <body>
     <NavBar client:load />
     <NavBarMobile client:idle />
+    <script>
+      setTimeout(() => {
+        alert("Try shrinking the window to see the responsive design");
+      }, 5000);
+    </script>
     <slot>
       default values
       <slot />
